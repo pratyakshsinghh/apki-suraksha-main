@@ -1,0 +1,12 @@
+{
+  "name": "Apki Suraksha - Smart Community Safety & AI Threat Detection",
+  "description": "Smart community safety platform featuring real-time AI camera threat detection, one-tap emergency SOS broadcast with GPS geolocation, automated contact notification, and Kanpur Red-to-Green crime zone awareness.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

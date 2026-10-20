@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Special Effects: Cyber Scanlines, Laser Line & Radar */
+@keyframes laser-scan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 98%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4), inset 0 0 15px rgba(239, 68, 68, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.7), inset 0 0 25px rgba(239, 68, 68, 0.4);
+  }
+}
+
+.animate-laser {
+  animation: laser-scan 3s ease-in-out infinite alternate;
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+.glow-panic {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Subtle Cyber Grid Background */
+.cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
